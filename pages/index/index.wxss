@@ -1,0 +1,152 @@
+/* 搜索框 start */
+.search-box {
+    padding-bottom: 14rpx;
+    background-color:#d43c33;
+}
+.search-main {
+    display: flex;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0 20rpx;
+    box-sizing:border-box;
+    background-color:rgba(255, 255, 255, 0.3);
+    border-radius:60rpx;
+
+}
+.ico-search {
+    width:28rpx;
+    height:28rpx;
+    margin: 16rpx;
+}
+.inp-search {
+    flex: 1;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 10rpx;
+    font-size: 28rpx;
+}
+.inp-placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+.ico-clear {
+    width:34rpx;
+    height:34rpx;
+    margin: 13rpx;
+}
+/* 搜索框 end */
+
+/* 轮播图 start */
+.slide-container {
+  position: relative;
+}
+.slide {
+  height: 336rpx;
+  margin: 0 10rpx;
+}
+.slide-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background-color: #d43c33;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4rpx;
+}
+/* 轮播图 end */
+
+/* 个性推荐 start */
+.recom-menu {
+    display: flex;
+    padding: 10rpx 0;
+    border-bottom: 2rpx solid #eee;
+}
+.recom-menu .recom-item {
+    flex: 1;
+    text-align: center;
+}
+.recom-menu .recom-ico {
+    position: relative;
+    width: 90rpx;
+    height: 90rpx;
+    margin: 0 auto;
+    box-sizing:border-box;
+    border: 2rpx solid #d43c33;
+    border-radius: 100%;
+}
+.recom-menu .recom-today {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    margin-top:6rpx;
+    color:#d43c33;
+    font-size:24rpx;
+}
+.recom-menu .recom-ico image {
+    width: 100%;
+    height: 100%;
+}
+.recom-menu .recom-txt {
+    font-size: 24rpx;
+}
+/* 个性推荐 end */
+
+/* 推荐列表 start */
+.recom-list {
+    padding: 10rpx 0;
+}
+.recom-list .title {
+    padding:15rpx 20rpx;
+    font-size: 30rpx;
+}
+.recom-list .title image{
+    display:inline-block;
+    vertical-align:middle;
+    margin-top:-4rpx;
+    width:16rpx;
+    margin-left:10rpx;
+}
+
+.song-list {
+    padding-left: 10rpx;
+    font-size: 0;
+}
+.song-item {
+    display: inline-block;
+    width: calc(100% / 3 - 10rpx);
+    padding-right: 10rpx;
+    margin-bottom: 10rpx;
+    vertical-align: top;
+}
+.song-item image {
+    width: 100%;
+    border-radius: 4rpx;
+}
+.song-img {
+    position: relative;
+}
+.play-count {
+    position: absolute;
+    top: 0;
+    right: 4rpx;
+    font-size: 22rpx;
+    color: #fff;
+}
+.play-count image {
+    display:inline-block;
+    width:20rpx;
+    margin-right: 4rpx;
+    vertical-align: middle;
+}
+.song-name, .song-singer {
+    padding:6rpx;
+    font-size:24rpx;
+}
+.song-singer {
+    color: #888;
+}
+/* 推荐列表 end */

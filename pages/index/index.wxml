@@ -1,0 +1,72 @@
+<wxs src="../../utils/util.wxs" module="util" />
+
+<view class="container">
+    <view class="search-box">
+        <view class="search-main">
+            <image src="../../assets/img/cm2_topbar_icn_search@2x.png" class="ico-search"></image>
+            <input placeholder="搜索歌曲、歌手、专辑" class="inp-search" placeholder-class="inp-placeholder"></input>
+            <image src="../../assets/img/cm2_search_icn_dlt@2x.png" class="ico-clear"></image>
+        </view>
+    </view>
+    <view class="slide-container">
+        <view class="slide-bg"></view>
+        <swiper indicator-dots="{{slideParams.indicatorDots}}" autoplay="{{slideParams.autoplay}}" interval="{{slideParams.interval}}" duration="{{slideParams.duration}}" class="slide">
+            <block wx:for="{{banners}}" wx:key="{{index}}">
+                <swiper-item>
+                <image src="{{item.imageUrl}}" class="slide-image" mode="widthFix" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="recom-menu">
+        <block wx:for="{{recommend}}" wx:key="{{index}}">
+            <view class="recom-item">
+                <view class="recom-ico">
+                    <image src="{{item.icon}}" mode="widthFix"></image>
+                    <text wx:if="{{item.id == 2}}" class="recom-today">{{today}}</text>
+                </view>
+                <text class="recom-txt">{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="recom-list">
+        <view class="title">推荐歌单 <image src="../../assets/img/cm4_disc_title_arr@2x.png" mode="widthFix" /> </view>
+        <view class="song-list">
+            <block wx:for="{{songList[0]}}" wx:key="{{index}}">
+                <view class="song-item">
+                    <view class="song-img">
+                        <image src="{{item.picUrl}}" mode="widthFix"></image>
+                        <view class="play-count" wx:if="{{item.playCount}}">
+                            <image src='../../assets/img/cm4_cover_icn_music@2x.png' mode='widthFix' />
+                            <text class="count">{{util.formatPlayCount(item.playCount)}}</text>
+                        </view>
+                    </view>
+                    <view class="song-name">{{item.name}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="title">最新音乐 <image src="../../assets/img/cm4_disc_title_arr@2x.png" mode="widthFix" /> </view>
+        <view class="song-list">
+            <block wx:for="{{songList[1]}}" wx:key="{{index}}" wx:if="{{index<6}}">
+                <view class="song-item">
+                    <view class="song-img">
+                        <image src="{{item.song.album.picUrl}}" mode="widthFix"></image>
+                    </view>
+                    <view class="song-name">{{item.name}}</view>
+                    <view class="song-singer">{{item.song.artists[0].name}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="title">主播电台 <image src="../../assets/img/cm4_disc_title_arr@2x.png" mode="widthFix" /> </view>
+        <view class="song-list">
+            <block wx:for="{{songList[2]}}" wx:key="{{index}}" wx:if="{{index<6}}">
+                <view class="song-item">
+                    <view class="song-img">
+                        <image src="{{item.picUrl}}" mode="widthFix"></image>
+                    </view>
+                    <view class="song-name">{{item.name}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
